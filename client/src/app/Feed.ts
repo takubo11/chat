@@ -1,4 +1,3 @@
-
 export class Feed {
   id: number;
   username: string;
