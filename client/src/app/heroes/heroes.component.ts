@@ -1,18 +1,14 @@
 import { Component, OnInit } from '@angular/core';
-import { Hero } from '../hero';
 import { Feed } from '../feed';
+import { HelloService } from '../hello.service';
 
 @Component({
   selector: 'app-heroes',
   templateUrl: './heroes.component.html',
-  styleUrls: ['./heroes.component.css']
+  styleUrls: ['./heroes.component.css'],
+  providers: [HelloService]
 })
 export class HeroesComponent implements OnInit {
-  hero: Hero = {
-    id: 1,
-    name: 'Windstrom'
-  };
-
   feed: Feed = {
     id: 1,
     username: 'john',
@@ -20,17 +16,14 @@ export class HeroesComponent implements OnInit {
     regist_date: '293r2'
   };
 
-  constructor() { }
+  constructor(private helloService: HelloService) { }
+  // constructor(private messageService: MessageService) { }
+  // constructor() { }
 
   ngOnInit() {
-
+    // this.alertService.getMessage().subscribe(message => { this.message = message; });
+    // this.feed.message = this.helloService.hello();
+    this.feed.message = 'hello';
   }
 
 }
-
-// export class Feed {
-//   id: number;
-//   username: string;
-//   message: string;
-//   regist_date: string;
-// }

@@ -1,13 +1,9 @@
-<h2>{{hero.name | uppercase}} Detail</h2>
-<div><span>id: </span>{{hero.id}}</div>
-<div><span>name: </span>{{hero.name}}</div>
-<div>
-  <label>name:
-    <input [(ngModel)]="hero.name" placeholder="name">
-  </label>
-</div>
-
 <h2>{{feed.id }} Message</h2>
 <div><span>username: </span>{{feed.username}}</div>
 <div><span>message: </span>{{feed.message}}</div>
+<div>
+  <label>message:
+    <input [(ngModel)]="feed.message" placeholder="message">
+  </label>
+</div>>
 <div><span>regist date: </span>{{feed.regist_date}}</div>
