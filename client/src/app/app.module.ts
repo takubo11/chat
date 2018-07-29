@@ -4,6 +4,11 @@ import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { HeroesComponent } from './heroes/heroes.component';
+import { HttpModule } from '@angular/http';
+// import { HttpClientModule} from '@angular/common/http';
+import {HttpClientModule} from '@angular/common/http';
+// import {HttpClient} from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
@@ -12,7 +17,9 @@ import { HeroesComponent } from './heroes/heroes.component';
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    HttpModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
