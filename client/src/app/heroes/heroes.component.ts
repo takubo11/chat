@@ -19,9 +19,10 @@ export class HeroesComponent implements OnInit {
   constructor(private helloService: HelloService) { }
 
   ngOnInit() {
-    // this.alertService.getMessage().subscribe(message => { this.message = message; });
     // this.feed.message = this.helloService.hello();
-    this.feed.message = 'hello';
+    // this.feed.message = 'hello';
+
+    this.helloService.get().subscribe(message => { this.feed.message = message; });
   }
 
 }

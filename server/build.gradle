@@ -25,7 +25,7 @@ group = 'halo.com.example'
 version = '0.0.1-SNAPSHOT'
 
 bootJar {
-	baseName = 'gs-spring-boot'
+	baseName = 'chat'
 	version =  '0.1.0'
 }
 
@@ -54,8 +54,13 @@ dependencies {
 	compile("org.springframework.boot:spring-boot-starter-web")
 	compile("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
 	compile("org.jetbrains.kotlin:kotlin-reflect")
-	testCompile('org.springframework.boot:spring-boot-starter-test')
 	compile('org.springframework.boot:spring-boot-starter-data-redis')
 	compile('org.springframework.boot:spring-boot-starter-data-jpa')
+	compile('mysql:mysql-connector-java')
+	compile("org.springframework:spring-jdbc")
+	compile("com.h2database:h2")
+//	runtime('mysql:mysql-connector-java:6.0.6')
 	testCompile("junit:junit")
+	testCompile('org.springframework.boot:spring-boot-starter-test')
+
 }

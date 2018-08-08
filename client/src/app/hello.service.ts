@@ -7,7 +7,7 @@ import {Observable} from 'rxjs/Observable';
 })
 export class HelloService {
   public API = '//localhost:8080';
-  public HELLO_API = this.API + '/hello';
+  public HELLO_API = this.API + '/greet';
 
   // constructor(){}
 
