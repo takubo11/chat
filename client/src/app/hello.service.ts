@@ -24,7 +24,6 @@ export class HelloService {
   hello(): string {
     return 'Hello World Observable';
   }
-
 }
 
 
